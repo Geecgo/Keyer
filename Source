@@ -1,0 +1,55 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Main = Instance.new("Frame")
+local Submit = Instance.new("TextButton")
+local Input = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+Main.Name = "Main"
+Main.Parent = game.StarterGui.WhiteList
+Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Main.Position = UDim2.new(0.280543, 0, 0.320232898, 0)
+Main.Size = UDim2.new(0, 462, 0, 224)
+Main.Active = true
+Main.Draggable = true
+
+Submit.Name = "Submit"
+Submit.Parent = Main
+Submit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Submit.BackgroundTransparency = 1.000
+Submit.Position = UDim2.new(0.266233772, 0, 0.660714328, 0)
+Submit.Size = UDim2.new(0, 200, 0, 50)
+Submit.Font = Enum.Font.SourceSansBold
+Submit.Text = "Check!"
+Submit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Submit.TextScaled = true
+Submit.TextSize = 14.000
+Submit.TextWrapped = true
+Submit.MouseButton1Down:Connect(function()
+	if [Input].Text == "15542035549" then
+		Main.Visible = false
+		
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Geecgo/Source-FIx/main/Source", true))()
+	end
+end)
+
+Input.Name = "Input"
+Input.Parent = Main
+Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Input.BackgroundTransparency = 1.000
+Input.Position = UDim2.new(0.266233772, 0, 0.263392866, 0)
+Input.Size = UDim2.new(0, 200, 0, 89)
+Input.ClearTextOnFocus = false
+Input.Font = Enum.Font.SourceSansBold
+Input.Text = "Key!"
+Input.TextColor3 = Color3.fromRGB(255, 255, 255)
+Input.TextScaled = true
+Input.TextSize = 14.000
+Input.TextWrapped = true
+
+UICorner.Parent = Main
